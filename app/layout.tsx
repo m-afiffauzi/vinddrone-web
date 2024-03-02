@@ -32,6 +32,10 @@ export default function RootLayout({
           property="og:description"
           content="Jasa Sewa Drone Area Magelang dan Sekitarnya? Pakai VINDDRONE aja!"
         />
+        <meta
+          property="og:image"
+          content="https://ogcdn.net/2c2c6737-47d4-4459-9969-e711eb48394c/v1/vinddrone.vercel.app/VINDDRONE%20-%20Sewa%20Drone%20Magelang/Jasa%20Sewa%20Drone%20Area%20Magelang%20dan%20Sekitarnya%3F%20Pakai%20VINDDRONE%20aja!/https%3A%2F%2Fopengraph.b-cdn.net%2Fproduction%2Fdocuments%2F734935b2-6681-480b-9b5f-24dcf4395f82.png%3Ftoken%3DR_mTo0OnCMiRLAcxnq-iAEWaGtdCYrirfdOXkl37s-k%26height%3D630%26width%3D1200%26expires%3D33245350644/og.png"
+        />
 
         {/*  Twitter Meta Tags  */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -41,6 +45,10 @@ export default function RootLayout({
         <meta
           name="twitter:description"
           content="Jasa Sewa Drone Area Magelang dan Sekitarnya? Pakai VINDDRONE aja!"
+        />
+        <meta
+          name="twitter:image"
+          content="https://ogcdn.net/2c2c6737-47d4-4459-9969-e711eb48394c/v1/vinddrone.vercel.app/VINDDRONE%20-%20Sewa%20Drone%20Magelang/Jasa%20Sewa%20Drone%20Area%20Magelang%20dan%20Sekitarnya%3F%20Pakai%20VINDDRONE%20aja!/https%3A%2F%2Fopengraph.b-cdn.net%2Fproduction%2Fdocuments%2F734935b2-6681-480b-9b5f-24dcf4395f82.png%3Ftoken%3DR_mTo0OnCMiRLAcxnq-iAEWaGtdCYrirfdOXkl37s-k%26height%3D630%26width%3D1200%26expires%3D33245350644/og.png"
         />
 
         {/* Google Verif Tag */}

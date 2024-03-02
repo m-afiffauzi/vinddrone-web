@@ -10,12 +10,16 @@ const Footer = () => {
   return (
     <section id="footer" className="w-full h-1/4 bg-white py-4 relative">
       <Container>
-        <div className="w-full mx-auto flex items-center justify-center">
+        <h2 className="md:text-2xl font-bold text-center">Kontak</h2>
+        <h4 className="text-sm md:text-xl text-center">
+          Hubungi kami untuk informasi lebih lanjut.
+        </h4>
+        <div className="w-full mx-auto flex items-center justify-center mt-8">
           <div className="h-96 w-full z-0">
             <Maps />
           </div>
         </div>
-        <div className="flex flex-col p-4 gap-2 text-xs md:font-medium mb-20">
+        <div className="flex flex-col p-4 gap-2 text-xs md:font-medium mb-10">
           <div className="w-full sm:flex items-center justify-start gap-2">
             <b>Alamat: </b>
             <Link
@@ -78,9 +82,9 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <div className="border-t absolute bottom-0 left-0 w-full py-8 flex items-center justify-center">
-          <p className="text-xs md:text-sm font-light">
-            © {year} | <b className="font-medium">Vindrone </b>All Rights
+        <div className="border-t absolute bottom-0 left-0 w-full py-4 flex items-center justify-center bg-black">
+          <p className="text-xs md:text-sm font-light text-white">
+            © {year} | <b className="font-medium">Vinddrone </b>All Rights
             Reserved
           </p>
         </div>

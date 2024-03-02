@@ -23,7 +23,7 @@ const Hero = () => {
         </div>
       </Container>
       <video
-        src={require("../public/vinddrone.mp4")}
+        src={"/vinddrone.mp4"}
         autoPlay
         muted
         loop

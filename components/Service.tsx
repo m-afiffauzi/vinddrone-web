@@ -41,11 +41,9 @@ const Service = () => {
   return (
     <section id="plans" className="w-full min-h-screen bg-white -mt16 py-16">
       <Container>
-        <h2 className="md:text-2xl font-bold text-center">
-          Service / Layanan Kami
-        </h2>
+        <h2 className="md:text-2xl font-bold text-center">Paket</h2>
         <h4 className="text-sm md:text-xl text-center">
-          Pilih Paket Sesuai Kebutuhan Anda
+          Pilih paket sesuai kebutuhan anda.
         </h4>
         <div className="flex flex-col items-center justify-center md:grid lg:grid-cols-3 mx-auto px-4 xl:px-24 gap-8 lg:gap-4 xl:gap-12 mt-12">
           {plans.map((plan, i) => (

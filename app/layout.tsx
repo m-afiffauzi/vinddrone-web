@@ -24,6 +24,34 @@ export default function RootLayout({
   return (
     <html lang="id">
       <head>
+        {/* Facebook Meta Tag */}
+        <meta property="og:url" content="https://vinddrone.vercel.app/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="VINDDRONE - Sewa Drone Magelang" />
+        <meta
+          property="og:description"
+          content="Jasa Sewa Drone Area Magelang dan Sekitarnya? Pakai VINDDRONE aja!"
+        />
+        <meta
+          name="twitter:image"
+          content="https://ogcdn.net/2c2c6737-47d4-4459-9969-e711eb48394c/v1/vinddrone.vercel.app/VINDDRONE%20-%20Sewa%20Drone%20Magelang/Jasa%20Sewa%20Drone%20Area%20Magelang%20dan%20Sekitarnya%3F%20Pakai%20VINDDRONE%20aja!/https%3A%2F%2Fopengraph.b-cdn.net%2Fproduction%2Fdocuments%2F734935b2-6681-480b-9b5f-24dcf4395f82.png%3Ftoken%3DKIz7rVUoN9MtIdVEPUeyPU7QWpc3XVRRllG4wVk1_zs%26height%3D630%26width%3D1200%26expires%3D33245346742/og.png"
+        />
+
+        {/*  Twitter Meta Tags  */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="vinddrone.vercel.app" />
+        <meta property="twitter:url" content="https://vinddrone.vercel.app/" />
+        <meta name="twitter:title" content="VINDDRONE - Sewa Drone Magelang" />
+        <meta
+          name="twitter:description"
+          content="Jasa Sewa Drone Area Magelang dan Sekitarnya? Pakai VINDDRONE aja!"
+        />
+        <meta
+          name="twitter:image"
+          content="https://ogcdn.net/2c2c6737-47d4-4459-9969-e711eb48394c/v1/vinddrone.vercel.app/VINDDRONE%20-%20Sewa%20Drone%20Magelang/Jasa%20Sewa%20Drone%20Area%20Magelang%20dan%20Sekitarnya%3F%20Pakai%20VINDDRONE%20aja!/https%3A%2F%2Fopengraph.b-cdn.net%2Fproduction%2Fdocuments%2F734935b2-6681-480b-9b5f-24dcf4395f82.png%3Ftoken%3DKIz7rVUoN9MtIdVEPUeyPU7QWpc3XVRRllG4wVk1_zs%26height%3D630%26width%3D1200%26expires%3D33245346742/og.png"
+        />
+
+        {/* Google Verif Tag */}
         <meta
           name="google-site-verification"
           content="qYrV-2oRM0QfaYdP1Pje5agBPQQaLFUs6wRBVgT_g2I"

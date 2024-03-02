@@ -27,7 +27,7 @@ const Header = () => {
   return (
     <header
       id="header"
-      className="sm:flex sm:justify-between py-3 px-4 border-b sticky top-0 left-0 bg-white z-50"
+      className="sm:flex sm:justify-between py-2 px-2 border-b sticky top-0 left-0 bg-white z-50"
     >
       <Container>
         <div className="relative px-4 sm:px-6 lg:px-8 flex items-center justify-between w-full">

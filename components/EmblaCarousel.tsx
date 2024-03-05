@@ -100,21 +100,6 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     {
       url: "/20.png",
     },
-    {
-      url: "/21.png",
-    },
-    {
-      url: "/22.png",
-    },
-    {
-      url: "/23.png",
-    },
-    {
-      url: "/24.png",
-    },
-    {
-      url: "/25.png",
-    },
   ];
 
   return (

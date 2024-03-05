@@ -3,8 +3,9 @@ import { MetadataRoute } from "next";
 export default async function sitempap(): Promise<MetadataRoute.Sitemap> {
   return [
     {
-      url: `${process.env.NEXT_PUBLIC_BASE_URL}`,
+      url: `https://vinddrone.vercel.app/`,
       lastModified: new Date(),
+      priority: 1,
     },
   ];
 }

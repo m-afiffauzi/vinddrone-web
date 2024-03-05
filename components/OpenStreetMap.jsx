@@ -8,13 +8,13 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import MarkerIcon from "../node_modules/leaflet/dist/images/marker-icon.png";
 import MarkerShadow from "../node_modules/leaflet/dist/images/marker-shadow.png";
 
-function Map() {
+function OpenStreetMap() {
   const position = [-7.58464, 110.20227];
   return (
     <MapContainer
       className="h-full w-full"
       center={position}
-      zoom={16}
+      zoom={13}
       scrollWheelZoom={false}
     >
       <TileLayer
@@ -52,4 +52,4 @@ function Map() {
   );
 }
 
-export default Map;
+export default OpenStreetMap;

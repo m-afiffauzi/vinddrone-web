@@ -1,7 +1,7 @@
 import dynamic from "next/dynamic";
 
-const Map = dynamic(() => import("./Map"), {
+const OpenStreetMap = dynamic(() => import("./OpenStreetMap"), {
   ssr: false,
 });
 
-export default Map;
+export default OpenStreetMap;

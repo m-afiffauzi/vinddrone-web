@@ -3,6 +3,7 @@ import Link from "next/link";
 import Container from "./ui/container";
 import { Button } from "./ui/button";
 import MobileNav from "./MobileNav";
+import { ModeToggle } from "./ModeToggle";
 
 const Header = () => {
   const routes = [
@@ -27,7 +28,7 @@ const Header = () => {
   return (
     <header
       id="header"
-      className="sm:flex sm:justify-between py-2 px-2 border-b sticky top-0 left-0 bg-white z-50"
+      className="sm:flex sm:justify-between py-2 px-2 border-b bg-background sticky top-0 left-0 z-50"
     >
       <Container>
         <div className="relative px-4 sm:px-6 lg:px-8 flex items-center justify-between w-full">
@@ -46,6 +47,7 @@ const Header = () => {
                 </Link>
               </Button>
             ))}
+            <ModeToggle />
           </nav>
           <div className="md:hidden">
             <MobileNav />

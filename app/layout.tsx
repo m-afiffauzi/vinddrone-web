@@ -1,16 +1,17 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import "./embla.css";
 import Header from "@/components/Header";
 import FloatingButton from "@/components/FloatingButton";
+import { ThemeProvider } from "@/components/ThemeProvider";
 
-const inter = Inter({ subsets: ["latin"] });
+const fontStyle = Poppins({ weight: "400", preload: false });
 
 export const metadata: Metadata = {
   title: "VINDDRONE - Sewa Drone Magelang",
   description:
-    "Jasa Sewa Drone Area Magelang dan Sekitarnya? Pakai VINDDRONE aja!",
+    "Jasa Sewa Drone Area Magelang dan Sekitarnya? Pakai VINDDRONE aja! Hubungi No.Hp/WA 082138351343 sekarang juga!",
   twitter: {
     card: "summary_large_image",
   },
@@ -30,7 +31,7 @@ export default function RootLayout({
         <meta property="og:title" content="VINDDRONE - Sewa Drone Magelang" />
         <meta
           property="og:description"
-          content="Jasa Sewa Drone Area Magelang dan Sekitarnya? Pakai VINDDRONE aja!"
+          content="Jasa Sewa Drone Area Magelang dan Sekitarnya? Pakai VINDDRONE aja! Hubungi No.Hp/WA 082138351343 sekarang juga! Hubungi No.Hp/WA 082138351343 sekarang juga!"
         />
         <meta
           property="og:image"
@@ -44,7 +45,7 @@ export default function RootLayout({
         <meta name="twitter:title" content="VINDDRONE - Sewa Drone Magelang" />
         <meta
           name="twitter:description"
-          content="Jasa Sewa Drone Area Magelang dan Sekitarnya? Pakai VINDDRONE aja!"
+          content="Jasa Sewa Drone Area Magelang dan Sekitarnya? Pakai VINDDRONE aja! Hubungi No.Hp/WA 082138351343 sekarang juga!"
         />
         <meta
           name="twitter:image"
@@ -57,10 +58,17 @@ export default function RootLayout({
           content="qYrV-2oRM0QfaYdP1Pje5agBPQQaLFUs6wRBVgT_g2I"
         />
       </head>
-      <body id="top" className={inter.className}>
-        <Header />
-        {children}
-        <FloatingButton />
+      <body id="top" className={fontStyle.className}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header />
+          {children}
+          <FloatingButton />
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -21,7 +21,7 @@ const Portfolio = () => {
   return (
     <section
       id="portfolio"
-      className="w-full h-full bg-white py-16 text-center px-4"
+      className="w-full h-full bg-background py-16 text-center px-4"
     >
       <Container>
         <h2 className="md:text-2xl font-bold">Portofolio</h2>

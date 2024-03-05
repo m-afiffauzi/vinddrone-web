@@ -1,6 +1,6 @@
 import React from "react";
 import Container from "./ui/container";
-import Maps from "./Dynamic";
+import OpenStreetMap from "./Dynamic";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
@@ -8,7 +8,7 @@ const Footer = () => {
   const date = new Date();
   const year = date.getFullYear();
   return (
-    <section id="footer" className="w-full h-1/4 bg-white py-4 relative">
+    <section id="footer" className="w-full h-1/4 bg-background py-4 relative">
       <Container>
         <h2 className="md:text-2xl font-bold text-center">Kontak</h2>
         <h4 className="text-sm md:text-xl text-center">
@@ -16,7 +16,7 @@ const Footer = () => {
         </h4>
         <div className="w-full mx-auto flex items-center justify-center mt-8">
           <div className="h-96 w-full z-0">
-            <Maps />
+            <OpenStreetMap />
           </div>
         </div>
         <div className="flex flex-col p-4 gap-2 text-xs md:font-medium mb-10">
@@ -82,8 +82,8 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <div className="border-t absolute bottom-0 left-0 w-full py-4 flex items-center justify-center bg-black">
-          <p className="text-xs md:text-sm font-light text-white">
+        <div className="border-t absolute bottom-0 left-0 w-full py-4 flex items-center justify-center bg-background">
+          <p className="text-xs md:text-sm font-light">
             © {year} | <b className="font-medium">Vinddrone </b>All Rights
             Reserved
           </p>

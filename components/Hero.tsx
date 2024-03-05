@@ -15,7 +15,10 @@ const Hero = () => {
           </h4>
           <div className="flex items-center justify-center gap-5 mt-5">
             <Link href={"/#plans"} className="group">
-              <Button variant={"outline"} className="bg-transparent w-28 h-14">
+              <Button
+                variant={"outline"}
+                className="bg-transparent dark:border-white dark:hover:bg-background dark:hover:invert w-28 h-14"
+              >
                 <ChevronDown className="text-5xl animate-bounce" />
               </Button>
             </Link>
@@ -27,7 +30,7 @@ const Hero = () => {
         autoPlay
         muted
         loop
-        className="fixed top-0 left-0 aspect-video h-screen w-screen brightness-50 -z-[1] object-cover"
+        className="fixed top-0 left-0 aspect-video h-screen w-screen brightness-50 dark:brightness-25 -z-[1] object-cover"
       />
     </section>
   );

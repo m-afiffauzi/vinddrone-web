@@ -39,7 +39,10 @@ const Service = () => {
     },
   ];
   return (
-    <section id="plans" className="w-full min-h-screen bg-white -mt16 py-16">
+    <section
+      id="plans"
+      className="w-full min-h-screen bg-background -mt16 py-16"
+    >
       <Container>
         <h2 className="md:text-2xl font-bold text-center">Paket</h2>
         <h4 className="text-sm md:text-xl text-center">

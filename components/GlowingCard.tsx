@@ -20,14 +20,14 @@ type PlanProps = {
 export function GlowingCard({ plan }: PlanProps) {
   return (
     <div>
-      <BackgroundGradient className="rounded-[22px] max-w-lg md:min-w-sm py-4 sm:py-8 px-20 sm:px-28 lg:px-20 bg-white dark:bg-zinc-900 text-center">
+      <BackgroundGradient className="rounded-[22px] max-w-lg md:min-w-sm py-4 sm:py-8 px-20 sm:px-28 lg:px-20 bg-background text-center">
         <div className="w-full mx-auto flex items-center justify-center">
           <Image
             src={`/mavic-mini.jpg`}
             alt="Mavic Mini"
             height="100"
             width="100"
-            className="object-contain"
+            className="object-contain rounded-xl"
           />
         </div>
         <p className="text-base block font-semibold md:text-xl text-black mt-4 mb-2 dark:text-neutral-200">
@@ -43,7 +43,7 @@ export function GlowingCard({ plan }: PlanProps) {
           <div className="text-neutral-600 dark:text-neutral-400 line-through flex items-center bg-transparent mt-2 text-xs font-bold cursor-default">
             <span>{plan.exprice}</span>
           </div>
-          <div className="rounded-full px-4 py-2 text-white flex items-center bg-black text-sm font-bold dark:bg-zinc-800 cursor-default">
+          <div className="rounded-full px-4 py-2 text-white flex items-center bg-black dark:border-white dark:border text-sm font-bold dark:bg-zinc-800 cursor-default">
             <span>{plan.price}</span>
           </div>
         </div>

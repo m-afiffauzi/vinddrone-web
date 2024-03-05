@@ -33,7 +33,7 @@ const MobileNav = () => {
   ) : (
     <Sheet key={"top"}>
       <SheetTrigger asChild>
-        <Button variant="outline">
+        <Button variant="outline" className="border-none">
           <Menu />
         </Button>
       </SheetTrigger>
@@ -52,7 +52,7 @@ const MobileNav = () => {
               </Link>
             ))}
           </nav>
-          <div className="absolute top-1 left-1">
+          <div className="absolute top-0 left-0">
             <ModeToggle />
           </div>
         </div>

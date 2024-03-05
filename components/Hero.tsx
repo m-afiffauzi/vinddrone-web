@@ -14,7 +14,7 @@ const Hero = () => {
             Jasa Sewa Drone Area Magelang
           </h4>
           <div className="flex items-center justify-center gap-5 mt-5">
-            <Link href={"/#plans"} className="group">
+            <Link href={"/#plan"} className="group">
               <Button
                 variant={"outline"}
                 className="bg-transparent dark:border-white dark:hover:bg-background dark:hover:invert w-28 h-14"

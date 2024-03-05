@@ -35,7 +35,7 @@ const Header = () => {
           <Link href="#top">
             <h1 className="text-xl font-bold">VINDDRONE</h1>
           </Link>
-          <nav className="mx-6 md:flex items-center space-x-4 lg:space-x-6 hidden">
+          <nav className="md:flex items-center space-x-4 lg:space-x-6 hidden">
             {routes.map((route, i) => (
               <Button key={i} asChild variant="link">
                 <Link

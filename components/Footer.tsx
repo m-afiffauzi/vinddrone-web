@@ -8,7 +8,10 @@ const Footer = () => {
   const date = new Date();
   const year = date.getFullYear();
   return (
-    <section id="footer" className="w-full h-1/4 bg-background py-4 relative">
+    <section
+      id="footer"
+      className="w-full h-1/4 bg-background pt-16 pb-4 relative"
+    >
       <Container>
         <h2 className="md:text-2xl font-bold text-center">Kontak</h2>
         <h4 className="text-sm md:text-xl text-center">

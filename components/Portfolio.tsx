@@ -31,7 +31,7 @@ const Portfolio = () => {
         </h4>
         <EmblaCarousel options={OPTIONS} />
         <h4 className="text-sm md:text-xl my-8">
-          Klik link dibawah ini untuk melihat portfolio lebih lengkap.
+          Klik link dibawah ini untuk melihat portofolio lebih lengkap.
         </h4>
         <div className="flex flex-col sm:flex-row items-center justify-center md:gap-4 md:p-4">
           {contents.map((content, i) => (

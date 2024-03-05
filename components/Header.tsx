@@ -12,7 +12,7 @@ const Header = () => {
       label: "Beranda",
     },
     {
-      href: "#plans",
+      href: "#plan",
       label: "Paket",
     },
     {

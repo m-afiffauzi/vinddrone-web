@@ -15,7 +15,7 @@ const MobileNav = () => {
       label: "Beranda",
     },
     {
-      href: "#plans",
+      href: "#plan",
       label: "Paket",
     },
     {

@@ -2,7 +2,7 @@ import React from "react";
 import Container from "./ui/container";
 import { GlowingCard } from "./GlowingCard";
 
-const Service = () => {
+const Plan = () => {
   const plans = [
     {
       name: "Paket Basic",
@@ -40,7 +40,7 @@ const Service = () => {
   ];
   return (
     <section
-      id="plans"
+      id="plan"
       className="w-full min-h-screen bg-background -mt16 py-16"
     >
       <Container>
@@ -64,4 +64,4 @@ const Service = () => {
   );
 };
 
-export default Service;
+export default Plan;

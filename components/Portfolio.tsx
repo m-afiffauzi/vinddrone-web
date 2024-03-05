@@ -26,7 +26,7 @@ const Portfolio = () => {
       <Container>
         <h2 className="md:text-2xl font-bold">Portofolio</h2>
         <h4 className="text-sm md:text-xl mb-8">
-          Gunakan portfolio dibawah sebagai gambaran dari jasa yang kami
+          Gunakan portofolio dibawah sebagai gambaran dari jasa yang kami
           sediakan.
         </h4>
         <EmblaCarousel options={OPTIONS} />

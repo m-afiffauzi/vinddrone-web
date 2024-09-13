@@ -1,7 +1,8 @@
 "use client";
 import React from "react";
 import { BackgroundGradient } from "./ui/background-gradient";
-import Image from "next/image";
+import Link from "next/link";
+import { CheckCircle } from "lucide-react";
 
 type PlanProps = {
   plan: {
@@ -14,40 +15,60 @@ type PlanProps = {
     resolution: string;
     uptime: string;
     addon: string;
+    link: string;
   };
 };
 
 export function GlowingCard({ plan }: PlanProps) {
   return (
-    <div>
-      <BackgroundGradient className="rounded-[22px] max-w-lg md:min-w-sm py-4 sm:py-8 px-20 sm:px-28 lg:px-20 bg-background text-center">
-        <div className="w-full mx-auto flex items-center justify-center">
-          <Image
-            src={`/mavic-mini.jpg`}
-            alt="Mavic Mini"
-            height="100"
-            width="100"
-            className="object-contain rounded-xl"
-          />
-        </div>
-        <p className="text-base block font-semibold md:text-xl text-black mt-4 mb-2 dark:text-neutral-200">
-          {plan.name}
-        </p>
-        <div className="flex flex-col items-center justify-center gap-1 text-sm text-neutral-600 dark:text-neutral-400">
-          <p>{plan.battery}</p>
+    <BackgroundGradient className="rounded-[22px] w-full max-w-xl py-8 px-16 sm:px-28 lg:px-10 bg-background text-center">
+      <p className="block font-extrabold text-xl md:text-2xl text-black mb-2 dark:text-neutral-200">
+        {plan.name}
+      </p>
+      <div className="flex flex-col items-start justify-center gap-1 text-sm text-black dark:text-neutral-200">
+        <div className="flex items-center justify-center gap-2">
+          <CheckCircle width={16} color="green" />
           <p>{plan.drone}</p>
-          <p>{plan.resolution}</p>
-          <p>{plan.uptime}</p>
-          <p>{plan.memory}</p>
-          <p className="font-light">{plan.addon}</p>
-          <div className="text-neutral-600 dark:text-neutral-400 line-through flex items-center bg-transparent mt-2 text-xs font-bold cursor-default">
-            <span>{plan.exprice}</span>
-          </div>
-          <div className="rounded-full px-4 py-2 text-white flex items-center bg-black dark:border-white dark:border text-sm font-bold dark:bg-zinc-800 cursor-default">
-            <span>{plan.price}</span>
-          </div>
         </div>
-      </BackgroundGradient>
-    </div>
+        <div className="flex items-center justify-center gap-2">
+          <CheckCircle width={16} color="green" />
+          <p>{plan.battery}</p>
+        </div>
+        <div className="flex items-center justify-center gap-2">
+          <CheckCircle width={16} color="green" />
+          <p>{plan.resolution}</p>
+        </div>
+        <div className="flex items-center justify-center gap-2">
+          <CheckCircle width={16} color="green" />
+          <p>{plan.uptime}</p>
+        </div>
+        <div className="flex items-center justify-center gap-2">
+          <CheckCircle width={16} color="green" />
+          <p>{plan.memory}</p>
+        </div>
+        <div className="flex items-center justify-center gap-2">
+          <CheckCircle width={16} color="green" />
+          <p>{plan.addon}</p>
+        </div>
+      </div>
+      <div className="flex flex-col items-center justify-center">
+        <div className="text-neutral-600 dark:text-neutral-400 flex items-center bg-transparent mt-2 text-xs cursor-default">
+          <span>Mulai Dari</span>
+        </div>
+        <div className="text-black dark:text-primary flex items-center text-lg lg:text-xl font-extrabold cursor-default">
+          <span>{plan.price}</span>
+        </div>
+        <Link
+          rel="noopener"
+          target="_blank"
+          href={plan.link}
+          className="text-sm font-medium relative p-[3px] mt-2"
+        >
+          <div className="px-4 p-2 bg-gradient-to-r from-purple-400 to-cyan-400 dark:from-purple-500 dark:to-cyan-500 rounded-full relative group transition duration-200 text-neutral-800 dark:text-neutral-50 hover:scale-105">
+            <span>Pesan Sekarang</span>
+          </div>
+        </Link>
+      </div>
+    </BackgroundGradient>
   );
 }

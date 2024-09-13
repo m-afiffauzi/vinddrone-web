@@ -15,6 +15,10 @@ const MobileNav = () => {
       label: "Beranda",
     },
     {
+      href: "#service",
+      label: "Layanan",
+    },
+    {
       href: "#plan",
       label: "Paket",
     },
@@ -52,7 +56,7 @@ const MobileNav = () => {
               </Link>
             ))}
           </nav>
-          <div className="absolute top-0 left-0">
+          <div className="absolute top-3 left-3">
             <ModeToggle />
           </div>
         </div>

@@ -5,6 +5,7 @@ import "./embla.css";
 import Header from "@/components/Header";
 import FloatingButton from "@/components/FloatingButton";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { FloatingNavbar } from "@/components/FloatingNavbar";
 
 const fontStyle = Poppins({ weight: "400", preload: false });
 

@@ -8,6 +8,7 @@
 .embla__viewport {
   overflow: hidden;
   border-radius: 1.8rem;
+  aspect-ratio: 16/9;
 }
 .embla__container {
   border-radius: 1.8rem;

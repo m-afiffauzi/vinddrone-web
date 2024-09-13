@@ -3,7 +3,9 @@ import React, { useState, useEffect, useCallback } from "react";
 import { EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
 import { Thumb } from "./EmblaCarouselThumbsButton";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import Image from "next/image";
+import { PlaySquare } from "lucide-react";
 
 type PropType = {
   options?: EmblaOptionsType;
@@ -39,66 +41,51 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     emblaMainApi.on("reInit", onSelect);
   }, [emblaMainApi, onSelect]);
 
-  const images = [
+  const portfolioData = [
     {
-      url: "/1.png",
+      url: "/vinddrone.png",
+      title: "Vinddrone",
+      link: "https://fast.wistia.net/embed/iframe/sed1v4zloq?seo=true&videoFoam=true",
     },
     {
-      url: "/2.png",
+      url: "/ketep-pass.png",
+      title: "Ketep Pass",
+      link: "https://fast.wistia.net/embed/iframe/4elniluvbh?seo=true&videoFoam=true",
     },
     {
-      url: "/3.png",
+      url: "/desa-digital.png",
+      title: "Family Gathering Desa Digital",
+      link: "https://fast.wistia.net/embed/iframe/stb3emm6h3?seo=true&videoFoam=true",
     },
     {
-      url: "/4.png",
+      url: "/politeknik.png",
+      title: "Family Gathering Politeknik KTJ",
+      link: "https://fast.wistia.net/embed/iframe/9ctp9nd218?seo=true&videoFoam=true",
     },
     {
-      url: "/5.png",
+      url: "/travel.png",
+      title: "Traveling Borobudur",
+      link: "https://fast.wistia.net/embed/iframe/z4nl6cu35n?seo=true&videoFoam=true",
     },
     {
-      url: "/6.png",
+      url: "/pasar-ngaleh.png",
+      title: "Pasar Ngaleh Desa Bumiharjo",
+      link: "https://fast.wistia.net/embed/iframe/ydp0uq3uiu?seo=true&videoFoam=true",
     },
     {
-      url: "/7.png",
+      url: "/dieng.png",
+      title: "Dieng Wonderland",
+      link: "https://fast.wistia.net/embed/iframe/0z18jksoci?seo=true&videoFoam=true",
     },
     {
-      url: "/8.png",
+      url: "/sukomakmur.png",
+      title: "Sukomakmur",
+      link: "https://fast.wistia.net/embed/iframe/n375achinm?seo=true&videoFoam=true",
     },
     {
-      url: "/9.png",
-    },
-    {
-      url: "/10.png",
-    },
-    {
-      url: "/11.png",
-    },
-    {
-      url: "/12.png",
-    },
-    {
-      url: "/13.png",
-    },
-    {
-      url: "/14.png",
-    },
-    {
-      url: "/15.png",
-    },
-    {
-      url: "/16.png",
-    },
-    {
-      url: "/17.png",
-    },
-    {
-      url: "/18.png",
-    },
-    {
-      url: "/19.png",
-    },
-    {
-      url: "/20.png",
+      url: "/sawangan.png",
+      title: "Sawangan",
+      link: "https://fast.wistia.net/embed/iframe/gmgjiimfix?seo=true&videoFoam=true",
     },
   ];
 
@@ -106,42 +93,53 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     <div className="embla">
       <div className="embla__viewport" ref={emblaMainRef}>
         <div className="embla__container">
-          {images.map((image, index) => (
+          {portfolioData.map((data, index) => (
             <div className="embla__slide" key={index}>
-              <div className="embla__slide__number">
-                {index == 0 ? (
-                  <Image
-                    priority
-                    src={image.url}
-                    alt={`${index}`}
-                    width={800}
-                    height={800}
-                    className="aspect-video rounded-[1.8rem]"
-                  />
-                ) : (
-                  <Image
-                    src={image.url}
-                    alt={`${index}`}
-                    width={800}
-                    height={800}
-                    className="aspect-video rounded-[1.8rem]"
-                  />
-                )}
-              </div>
+              <Dialog>
+                <DialogTrigger className="relative group">
+                  <div className="embla__slide__number">
+                    <Image
+                      priority
+                      src={data.url}
+                      alt={data.title}
+                      width={1280}
+                      height={720}
+                    />
+                    <span className="flex items-center justify-center text-white w-full h-10 group-hover:h-full transition-all bg-black/50 absolute bottom-0 left-0">
+                      <PlaySquare
+                        width={50}
+                        height={50}
+                        className="scale-50 group-hover:scale-100 aspect-square"
+                      />
+                      <p className="group-hover:hidden text-sm">{data.title}</p>
+                    </span>
+                  </div>
+                </DialogTrigger>
+                <DialogContent className="p-0 min-w-[60vw] max-w-xl aspect-video flex items-center justify-center z-50">
+                  <iframe
+                    className="rounded-md w-full h-full"
+                    src={data.link}
+                    title={data.title}
+                    allow="autoplay; fullscreen"
+                    allowFullScreen
+                  ></iframe>
+                </DialogContent>
+              </Dialog>
             </div>
           ))}
         </div>
       </div>
 
-      <div className="embla-thumbs">
+      <div className="embla-thumbs -mt-3 sm:-mt-5">
         <div className="embla-thumbs__viewport" ref={emblaThumbsRef}>
           <div className="embla-thumbs__container">
-            {images.map((image, index) => (
+            {portfolioData.map((data, index) => (
               <Thumb
                 key={index}
                 onClick={() => onThumbClick(index)}
                 selected={index === selectedIndex}
                 index={index}
+                url={data.url}
               />
             ))}
           </div>
